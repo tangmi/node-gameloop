@@ -33,5 +33,5 @@ var gameloop = require('node-gameloop');
 
 Return | Function | Params | Description
 --- | --- | --- | ---
-number `id` | `setGameLoop` | (function `update(delta)`, [float `targetDeltaMs`]) | Sets and runs a game loop at a target delta (in milliseconds) [defaults to 30fps]. Runs function `update` with a parameter delta (time in seconds from last update). Returns the game loop ID used in `clearGameLoop`
+number `id` | `setGameLoop` | (function `update(delta)`, <br>[float `targetDeltaMs`]) | Sets and runs a game loop at a target delta (in milliseconds) [defaults to 30fps]. Runs function `update` with a parameter delta (time in seconds from last update). Returns the game loop ID used in `clearGameLoop`
 void | `clearGameLoop` | (number `id`) | Clears and stops a given game loop. Will cancel the loop immediately and will not wait for current frame to finish.
