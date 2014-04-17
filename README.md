@@ -14,6 +14,7 @@ var gameloop = require('node-gameloop');
 // start the loop at 30 fps (1000/30ms per frame) and grab its id
 var frameCount = 0;
 var id = gameloop.setGameLoop(function(delta) {
+	// `delta` is the delta time from the last frame
 	console.log('Hi there! (frame=%s, delta=%s)', frameCount++, delta);
 }, 1000 / 30);
 
@@ -23,3 +24,14 @@ setTimeout(function() {
 	gameloop.clearGameLoop(id);
 }, 2000);
 ```
+
+## API
+
+```js
+var gameloop = require('node-gameloop');
+```
+
+| Return | Method | Params | Description |
+| - |
+| number `id` | `setGameLoop` | (function `update(delta)`, [float `targetDeltaMs`]) | Sets and runs a game loop at a target delta (in milliseconds) [defaults to 30fps]. Runs function `update` with a parameter delta (time in seconds from last update). Returns the game loop ID used in `clearGameLoop` |
+| | `clearGameLoop` | (number `id`) | Clears and stops a given game loop. Will cancel the loop immediately and will not wait for current frame to finish. |
