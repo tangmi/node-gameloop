@@ -2,6 +2,8 @@
 
 A game loop designed by [timetocode](https://github.com/timetocode) for NodeJS applications. Uses a combination of `setTimeout` and `setImmediate` to achieve accurate update ticks with minimal CPU usage.
 
+This repo adds `npm` module support and an API that allows it to be called from client code.
+
 ## Example
 
 `node-gameloop` uses an API very similar to `setTimeout`/`setInterval`, returning an ID that can be used to clear the game loop later.
