@@ -31,6 +31,6 @@
   "homepage": "https://github.com/tangmi/node-gameloop",
   "devDependencies": {
     "usage": "^0.3.10",
-    "srun": "0.0.9"
+    "srun": "latest"
   }
 }
