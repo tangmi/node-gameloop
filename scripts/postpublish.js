@@ -11,7 +11,7 @@ console.log('');
 
 var oldversion = version;
 
-var regex = new RegExp(/([0-9]\.[0-9]\.)([0-9])/);
+var regex = new RegExp(/([0-9]+\.[0-9]+\.)([0-9]+)/);
 
 var first = version.replace(regex, '$1');
 var minor = version.replace(regex, '$2');
