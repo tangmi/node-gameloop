@@ -1,36 +1,36 @@
 {
-	"name": "node-gameloop",
-	"version": "0.0.7",
-	"description": "game loop designed for node applications, not for the browser",
-	"main": "index.js",
-	"directories": {
-		"example": "example"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"postpublish": "./node_modules/.bin/srun --script=postpublish"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/tangmi/node-gameloop.git"
-	},
-	"keywords": [
-		"gameloop",
-		"game",
-		"loop",
-		"node",
-		"application",
-		"app",
-		"desktop"
-	],
-	"author": "tangmi",
-	"license": "Artistic License 2.0",
-	"bugs": {
-		"url": "https://github.com/tangmi/node-gameloop/issues"
-	},
-	"homepage": "https://github.com/tangmi/node-gameloop",
-	"devDependencies": {
-		"usage": "^0.3.10",
-		"srun": "0.0.9"
-	}
+  "name": "node-gameloop",
+  "version": "0.0.8",
+  "description": "game loop designed for node applications, not for the browser",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postpublish": "./node_modules/.bin/srun --script=postpublish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tangmi/node-gameloop.git"
+  },
+  "keywords": [
+    "gameloop",
+    "game",
+    "loop",
+    "node",
+    "application",
+    "app",
+    "desktop"
+  ],
+  "author": "tangmi",
+  "license": "Artistic License 2.0",
+  "bugs": {
+    "url": "https://github.com/tangmi/node-gameloop/issues"
+  },
+  "homepage": "https://github.com/tangmi/node-gameloop",
+  "devDependencies": {
+    "usage": "^0.3.10",
+    "srun": "0.0.9"
+  }
 }
