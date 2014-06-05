@@ -8,7 +8,7 @@
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"postpublish": "node ./scripts/postpublish.js"
+		"postpublish": "./node_modules/.bin/srun --script=postpublish"
 	},
 	"repository": {
 		"type": "git",
@@ -30,6 +30,7 @@
 	},
 	"homepage": "https://github.com/tangmi/node-gameloop",
 	"devDependencies": {
-		"usage": "^0.3.10"
+		"usage": "^0.3.10",
+		"srun": "0.0.9"
 	}
 }
