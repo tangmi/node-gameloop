@@ -4,6 +4,10 @@ A game loop designed by [timetocode](https://github.com/timetocode) for NodeJS a
 
 This repo adds `npm` module support and an API that allows it to be called from client code.
 
+```sh
+npm install --save node-gameloop
+```
+
 ## Example
 
 `node-gameloop` uses an API very similar to `setTimeout`/`setInterval`, returning an ID that can be used to clear the game loop later.
