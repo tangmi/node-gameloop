@@ -1,4 +1,4 @@
-const gameloop = require('gameloop');
+const gameloop = require('..');
 
 // start the loop at 30 fps (1000/30ms per frame) and grab its id
 let frameCount = 0;
