@@ -1,6 +1,6 @@
 {
   "name": "node-gameloop",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "game loop designed for node applications, not for the browser",
   "main": "index.js",
   "directories": {
