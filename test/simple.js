@@ -8,7 +8,7 @@ let fps = 60;
 let intervalMs = 1000 / fps;
 
 gameloop.setGameLoop(function(delta) {
-	// console.log(`delta=${delta}`); // printing takes a lot of cpu?
+	console.log(`delta=${delta}`);
 
 	totalDelta += delta;
 	testRuns += 1;
