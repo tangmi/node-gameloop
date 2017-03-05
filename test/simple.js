@@ -1,4 +1,4 @@
-const usage = require('usage');
+const pidusage = require('pidusage');
 const gameloop = require('..');
 
 let totalDelta = 0;
@@ -20,7 +20,7 @@ let totalCpu = 0;
 setInterval(function() {
 	testCount += 1;
 
-	usage.lookup(process.pid, function(err, result) {
+	pidusage.stat(process.pid, function(err, result) {
 		totalCpu += result.cpu;
 
 		if (testCount == 10) {

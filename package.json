@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/tangmi/node-gameloop",
   "devDependencies": {
-    "usage": "latest",
+    "pidusage": "latest",
     "srun": "latest"
   }
 }
