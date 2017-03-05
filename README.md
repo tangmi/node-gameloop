@@ -1,4 +1,4 @@
-# node-gameloop
+# node-gameloop [![npm version](https://badge.fury.io/js/node-gameloop.svg)](https://badge.fury.io/js/node-gameloop)
 
 A game loop designed by [timetocode](https://github.com/timetocode) for NodeJS applications. Uses a combination of `setTimeout` and `setImmediate` to achieve accurate update ticks with minimal CPU usage.
 
