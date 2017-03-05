@@ -7,7 +7,7 @@ let testRuns = 0;
 let fps = 60;
 let intervalMs = 1000 / fps;
 
-gameloop.setGameLoop(function(delta) {
+const loop = gameloop.setGameLoop(function(delta) {
 	console.log(`delta=${delta}`);
 
 	totalDelta += delta;
@@ -17,7 +17,7 @@ gameloop.setGameLoop(function(delta) {
 let testCount = 0;
 let totalCpu = 0;
 
-setInterval(function() {
+const interval = setInterval(function() {
 	testCount += 1;
 
 	pidusage.stat(process.pid, function(err, result) {
@@ -30,7 +30,9 @@ setInterval(function() {
 			console.log(`target delta : ${intervalMs/1000}s`);
 			console.log(`average delta: ${avgDelta}s`);
 			console.log(`average cpu over ${testCount} seconds: ${totalCpu / testCount}%`);
-			process.exit(0);
+
+			gameloop.clearGameLoop(loop);
+			clearInterval(interval);
 		}
 	});
 }, 1000);

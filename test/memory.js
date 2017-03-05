@@ -4,7 +4,7 @@ const gameloop = require('..');
 let fps = 60;
 let intervalMs = 1000 / fps;
 
-gameloop.setGameLoop(function(delta) {}, intervalMs);
+const loop = gameloop.setGameLoop(function(delta) {}, intervalMs);
 
 let testCount = 0;
 
@@ -12,7 +12,7 @@ let memorySamples = [];
 
 const count = 25;
 console.log(`collecting samples for ${count} seconds`)
-setInterval(function() {
+const interval = setInterval(function() {
 	testCount += 1;
 
 	pidusage.stat(process.pid, function(err, result) {
@@ -37,9 +37,11 @@ setInterval(function() {
 				console.log('memory likely not leaking! :)');
 			} else {
 				console.log('memory may be leaking!');
+				process.exit(1);
 			}
 
-			process.exit(0);
+			gameloop.clearGameLoop(loop);
+			clearInterval(interval);
 		}
 	});
 }, 1000);
